@@ -11,23 +11,8 @@ frwd2 = forward_upto_distance(dist=10)
 right = turn(90)
 left = turn(-90)
 
-while True:
-	frwd()
-	
-	slope = getYZangle()
-	cmd = None
-	if(slope>=85 and slope<=95):
-		cmd = right
-		right()
-	elif(slope>=265 and slope<=275):
-		cmd = left
-		left()
-	
-	if(close_edge()):
-		break
-	
-	frwd2()
-	
-	cmd()
+
+frwd()
+right()
 	
 	
